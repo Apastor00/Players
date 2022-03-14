@@ -11,6 +11,9 @@ namespace firebasesample.Droid.Services.FirebaseAuth
 {
     public class FirebaseAuthService : IFirebaseAuthService
     {
+        public static String KEY_AUTH = "";
+        public static int REQ_AUTH = 200;
+
         public string getAuthKey()
         {
             throw new NotImplementedException();
@@ -28,15 +31,15 @@ namespace firebasesample.Droid.Services.FirebaseAuth
             try
             {
                 Firebase.Auth.FirebaseAuth.GetInstance(MainActivity.app).SignOut();
-                return true;
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                return false;
+                return Task.FromResult(false);
             }
         }
 
-        public Task<bool> SignIn(string email, string password)
+        public async Task<bool> SignIn(string email, string password)
         {
             try
             {
@@ -60,7 +63,7 @@ namespace firebasesample.Droid.Services.FirebaseAuth
             throw new NotImplementedException();
         }
 
-        public Task<bool> SignUp(string email, string password)
+        public async Task<bool> SignUp(string email, string password)
         {
             try
             {

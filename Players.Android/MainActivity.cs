@@ -5,9 +5,14 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Firebase;
+using Android.Gms.Auth.Api.SignIn;
+using Xamarin.Forms;
+using firebasesample.Droid.Services.FirebaseAuth;
+using Android.Content;
 
 namespace Players.Droid
 {
+
     [Activity(Label = "Players", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
@@ -19,7 +24,7 @@ namespace Players.Droid
             InitFirebaseAuth();
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+            LoadApplication(new App(new FirebaseAuthService()));
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -32,8 +37,8 @@ namespace Players.Droid
         private void InitFirebaseAuth()
         {
             var options = new FirebaseOptions.Builder()
-            .SetApplicationId("1:698104759680:android:39e692e6ae0408c0b42d65")
-            .SetApiKey("AIzaSyB1iwUiyj-QByHpm7jX2aZBcZU64C1am_8")
+            .SetApplicationId("1:289602937890:android:867098cd627fbf2f4b567b")
+            .SetApiKey("AIzaSyAxT4xny0iBfRnKwBFKYerkziCWIpWV090")
             .Build();
 
             if (app == null)

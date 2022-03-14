@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using firebasesample.iOS.Services.FirebaseAuth;
 
 using Foundation;
 using UIKit;
@@ -23,8 +24,9 @@ namespace Players.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
-
+            Firebase.Core.App.Configure();
+            LoadApplication(new App(new FirebaseAuthService()));
+            
             return base.FinishedLaunching(app, options);
         }
     }

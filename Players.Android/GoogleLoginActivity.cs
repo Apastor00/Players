@@ -9,7 +9,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V7.App;
 using Android.Gms.Common.Apis;
 using Android.Gms.Common;
 using System.Threading.Tasks;
@@ -17,6 +16,7 @@ using Android.Gms.Auth.Api.SignIn;
 using Android.Gms.Auth.Api;
 using Firebase.Auth;
 using Xamarin.Forms;
+using AndroidX.AppCompat.App;
 
 namespace firebasesample.Droid.Activities
 {
@@ -44,7 +44,7 @@ namespace firebasesample.Droid.Activities
             base.OnCreate(savedInstanceState);
 
             GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
-              .RequestIdToken("698104759680-fe6tadtin1md03u6giemp2ft29u5s6rl.apps.googleusercontent.com")
+              .RequestIdToken("289602937890-rn06uc5earuncfa0p822genbll5fvej9.apps.googleusercontent.com")
                 .Build();
 
             mGoogleApiClient = new GoogleApiClient.Builder(this)
