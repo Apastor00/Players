@@ -11,8 +11,8 @@ namespace firebasesample.Droid.Services.FirebaseAuth
 {
     public class FirebaseAuthService : IFirebaseAuthService
     {
-        public static String KEY_AUTH = "";
-        public static int REQ_AUTH = 200;
+        public static int REQ_AUTH = 9999;
+        public static String KEY_AUTH = "auth";
 
         public string getAuthKey()
         {

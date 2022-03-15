@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Firebase.Auth;
 using firebasesample.iOS.Services.FirebaseAuth;
 
 using Foundation;
@@ -29,5 +30,6 @@ namespace Players.iOS
             
             return base.FinishedLaunching(app, options);
         }
+
     }
 }

@@ -171,7 +171,7 @@ namespace firebasesample.iOS.Services.FirebaseAuth
 
         public async Task<bool> SignIn(string email, string password)
         {
-            
+
             Auth.DefaultInstance.SignInWithPassword(email, password, HandleAuthResultLoginHandler);
             token = tokenSource.Token;
             t = Task.Factory.StartNew(async () =>
@@ -188,6 +188,7 @@ namespace firebasesample.iOS.Services.FirebaseAuth
         {
             if (error != null)
             {
+                var usssss = error.UserInfo;
                 AuthErrorCode errorCode;
                 if (IntPtr.Size == 8) // 64 bits devices
                     errorCode = (AuthErrorCode)((long)error.Code);

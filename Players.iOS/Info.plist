@@ -38,12 +38,16 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>com.pujas.Players</string>
+			<string>289602937890-fhj9rfrd2mun1p9k4ua4a8oujiisj960.apps.googleusercontent.com</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.289602937890-fhj9rfrd2mun1p9k4ua4a8oujiisj960</string>
 			</array>
+			<key>CFBundleURLTypes</key>
+			<string>Viewer</string>
 		</dict>
 	</array>
+	<key>CFBundleShortVersionString</key>
+	<string>1</string>
 </dict>
 </plist>
