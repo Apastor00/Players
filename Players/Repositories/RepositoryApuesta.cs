@@ -19,11 +19,22 @@ namespace Players.Repositories
             List<Apuesta> lista = conexionRealm.All<Apuesta>().ToList();
             return lista;
         }
+
+        internal List<Subasta> GetSubastas()
+        {
+            throw new NotImplementedException();
+        }
+
         public void InsertarApuesta (Apuesta apuesta)
         {
             transaction = conexionRealm.BeginWrite();
             var entry = conexionRealm.Add(apuesta);
             transaction.Commit();
+        }
+
+        internal void InsertarSubasta(Subasta subasta)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -6,9 +6,11 @@
     <ContentPage.Content>
         <Grid>
             <StackLayout >
+                <Entry x:Name="ip" Placeholder="ip"/>
                 <Entry x:Name="user" Placeholder="user"/>
                 <Entry x:Name="password" Placeholder="pass"/>
                 <Button x:Name="btnLogin" Text="Login" />
+                <Button x:Name="btnNuevo" Text="Nueva Partida" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>

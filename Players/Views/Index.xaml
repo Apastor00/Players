@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:Players.ViewModels"
+    x:Class="Players.Views.Index">
+  <ContentPage.BindingContext> 
+            <viewmodels:SubastaModel/> 
+    </ContentPage.BindingContext>
+    <Grid>
+    <Image
+        Aspect="AspectFill"
+        Opacity="0.8"
+        Source="fotoSubasta.jpg" />
+    <ScrollView>
+        <StackLayout Spacing="0">
+            <StackLayout Padding="15,7,15,15" VerticalOptions="CenterAndExpand">
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Entry
+                        x:Name="user"
+                        
+                        HorizontalTextAlignment="Center"
+                        FontSize="14"
+                        Placeholder="Introduce Usuario"
+                        TextColor="Black" />
+                    <Entry
+                        x:Name="password"
+                        
+                        HorizontalTextAlignment="Center"
+                        FontSize="14"
+                        IsPassword="true"
+                        Placeholder="Introduce contraseña"
+                        TextColor="Black" />
+                    <Button
+                        x:Name="btnEntrar"
+                        CornerRadius="20"
+                        FontSize="14"
+                        Text="Entrar"
+                        BackgroundColor="Aquamarine"
+                        TextColor="Chocolate"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Grid>
+</ContentPage>

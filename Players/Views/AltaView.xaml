@@ -2,8 +2,31 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:Players.ViewModels"
     x:Class="Players.Views.AltaView">
+<ContentPage.BindingContext> 
+            <viewmodels:ApuestaModel/> 
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        
+        <StackLayout Margin="{OnPlatform iOS='0,26,0,0'}">
+            <Image Source="rmliverpool.jpg"/>
+            <Label Text="Usuario" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium"/>
+            <Entry x:Name="user" Text="{Binding Apuesta.user}" Placeholder="Introduce el usuario"/>
+            <Label Text="Resultado" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Image Source="realmadrid.png" HeightRequest="100" WidthRequest="100"/>
+                    <Stepper x:Name="stepperLocal" Increment="1" Minimum="0" Maximum="100" Value="{Binding Apuesta.resultadoLocal}"/>
+                    <Label x:Name="apuestaEquipo1" HorizontalTextAlignment="Center"/>                           
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="liverpool.png" HeightRequest="100" WidthRequest="100"/>
+                    <Stepper x:Name="stepperVisitante" Increment="1" Minimum="0" Maximum="100" Value="{Binding Apuesta.resultadoVisitante}"/>
+                    <Label x:Name="apuestaEquipo2"  HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </StackLayout>
+            <Button x:Name="realizarApuesta" Text="Realizar Apuesta" VerticalOptions="Center" HorizontalOptions="Center"
+                    Command="{Binding InsertarDato}"/>    
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
